@@ -48,13 +48,11 @@ export default function Hero() {
           
           {/* Main Photo Container */}
           <div className="absolute inset-0 bg-paper dark:bg-ink rounded-[2rem] border border-border dark:border-border-dark overflow-hidden">
-            <Image
-              src="/profile.jpg"
+            <img
+              src="profile.jpg"
               alt="Nilson Marques"
-              fill
-              className="object-cover"
-              priority
-              unoptimized
+              className="w-full h-full object-cover"
+              style={{ objectPosition: 'center' }}
             />
           </div>
         </div>
