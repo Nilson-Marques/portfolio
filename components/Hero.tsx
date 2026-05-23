@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useEffect, useState } from "react";
 import { contact } from "@/lib/data";
@@ -36,8 +36,26 @@ export default function Hero() {
   return (
     <section
       id="about"
-      className="min-h-screen flex flex-col justify-center pt-16 px-6 max-w-5xl mx-auto"
+      className="relative min-h-screen flex flex-col justify-center pt-16 px-6 max-w-5xl mx-auto"
     >
+      {/* Profile Photo Space */}
+      <div className="absolute top-32 right-6 w-32 h-32 md:w-48 md:h-48 lg:w-64 lg:h-64 hidden md:flex items-center justify-center opacity-0-start animate-fade-in animate-delay-500">
+        <div className="relative w-full h-full">
+          {/* Decorative backgrounds */}
+          <div className="absolute inset-0 bg-accent/10 rounded-[2rem] rotate-6 border border-accent/20" />
+          <div className="absolute inset-0 bg-accent/5 rounded-[2rem] -rotate-3 border border-accent/10" />
+          
+          {/* Main Photo Container */}
+          <div className="absolute inset-0 bg-paper dark:bg-ink rounded-[2rem] border border-border dark:border-border-dark overflow-hidden flex flex-col items-center justify-center text-muted font-mono p-4 text-center">
+            <div className="w-12 h-12 mb-4 rounded-full border border-dashed border-muted flex items-center justify-center text-lg">
+              ?
+            </div>
+            <span className="text-[10px] uppercase tracking-widest opacity-50 mb-1">Photo Placeholder</span>
+            <span className="text-[9px] leading-tight">Add your image to<br/>/public/profile.jpg</span>
+          </div>
+        </div>
+      </div>
+
       {/* Status badge */}
       <div className="opacity-0-start animate-fade-in animate-delay-100 mb-10">
         <span className="inline-flex items-center gap-2 text-xs font-mono border border-border dark:border-border-dark rounded-full px-4 py-1.5 text-muted">
